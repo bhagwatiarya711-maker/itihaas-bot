@@ -1,0 +1,59 @@
+# ================= Itihaas Auto-Bot config (PRODUCTION) =================
+channel:
+  name: "Itihaas Ki Kahaniyan"
+  language: "hi"
+  default_tags: ["history","itihaas","true story","history in hindi","documentary"]
+  upload_privacy: "public"
+
+video:
+  target_minutes: 40
+  max_minutes: 45
+  resolution: [1920, 1080]
+  fps: 30
+  visual_style: "hybrid"
+  kenburns_zoom: 1.10
+  captions: false
+  intro_clip: "assets/branding/intro.mp4"
+  outro_clip: "assets/branding/outro.mp4"
+
+# fixed branded intro + outro (same in every video)
+intro:
+  enabled: true
+  voice_rate: "+18%"          # intro voice thoda fast (music ke according)
+
+voice:
+  primary: "hi-IN-SwaraNeural"   # male | female: hi-IN-SwaraNeural
+  rate: "+20%"
+  pitch: "+0Hz"
+  volume: "+18%"   # zyada presence/energy = confident
+
+music:
+  volume_db: -22
+  sources: ["openverse", "local"]   # openverse=free mood-based music (no key)
+  folder: "assets/music"
+
+host:
+  enabled: true
+  clip: "assets/branding/host.mp4"
+  long_every: 6            # long video: har 6th visual par host presenter
+
+media:
+  images_per_minute: 6
+  sources: ["wikimedia", "loc", "met", "archive", "openverse", "pexels"]
+  stock_video_ratio: 0.35
+  safe_search: true
+
+reels:
+  enabled: true
+  length_seconds: 45
+  aspect: "9:16"
+  hook_from: "intro"
+
+schedule:
+  timezone: "Asia/Kolkata"
+  slots: ["07:00", "13:00", "18:00"]
+
+paths:
+  output_dir: "output"
+  data_dir: "data"
+  logs_dir: "logs"

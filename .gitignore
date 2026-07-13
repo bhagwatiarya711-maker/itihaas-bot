@@ -1,0 +1,30 @@
+.env
+*.session
+*.pkl
+ig_settings.json
+token.json
+client_secret*.json
+output/
+logs/
+__pycache__/
+*.pyc
+*.mp4
+*.mp3
+*.wav
+*.png
+!assets/branding/*.png
+.DS_Store
+
+# allow background music to reach the cloud
+!assets/music/*.mp3
+
+# reels queued for Instagram (must reach your PC)
+!reels_to_post/
+!reels_to_post/*.mp4
+!reels_to_post/*.txt
+
+# fixed intro music
+!assets/branding/*.mp3
+
+# host presenter clip
+!assets/branding/*.mp4
